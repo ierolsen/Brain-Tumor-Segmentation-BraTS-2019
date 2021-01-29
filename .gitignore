@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# on my pc
+data
+*.idea
+*.h5
+*.json
+
 # C extensions
 *.so
 
