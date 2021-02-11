@@ -1,4 +1,6 @@
-# Brain Tumor Segmentation BraTS19
+# INTRODUCTION 
+
+In this project, I aim to work with 3D images and UNET models. Before I couldn’t have any chance to work with them thus I don’t have any idea what they are. But this project will be so educational for me. As well I aim to make practice in algorithms.
 
 # Download Dataset:
 
@@ -169,7 +171,8 @@ Also, I fixed up these errors :) what I did is **resize** all images. Their size
 
 Before defining the model, I will define **Flair**, **T2**, and **seg** images. Also during training, I will use **Flair + T2**. The point is **Flair** and **T2** will be added each self. The reason why I will add two images called **Flair** and **T2** is that these two images complete their deficiency. For example, we can see clearly Edema in Flair but in T2, we can see the center of the Tumor clearly.
 
-![flair_t2_explanation](https://user-images.githubusercontent.com/30235603/107290032-2f6fda00-6a66-11eb-8b67-87c8aa4c5770.png)
+
+![flair_t2_explanation](https://user-images.githubusercontent.com/30235603/107617700-ad8fd480-6c50-11eb-88e9-0ddf48860f8d.png)
 
 
 ![17](https://user-images.githubusercontent.com/30235603/107290068-3860ab80-6a66-11eb-8a41-e98ba819bc15.png)
@@ -322,7 +325,19 @@ After this loop, all segmentation images will be in the center of the frame and 
 Now, I will train a model again for cropped images
 
 
-![33](https://user-images.githubusercontent.com/30235603/107564899-40922580-6be3-11eb-88c5-8632a8f47384.png)
+![33](https://user-images.githubusercontent.com/30235603/107618078-43c3fa80-6c51-11eb-8a5e-a93b496ab786.png)
 
 
-The model doesn’t obtain because of that I worked with a subset (less dataset) but next days, if I solve the error, I will upload that again.
+The model doesn’t obtain well results because of that I worked with a subset (less dataset) but next days, if I solve the error, I will upload that again.
+
+# CONCLUSION
+
+In this great project, I’ve learned tons of useful knowledge about algorithms, computer vision, and above all, 3D images and UNET Models. The other important thing that I learned is absolutely fixing error :) they took a few days but I solved all of them! These projects are the best way to improve myself, facing new errors and solving them.
+
+But actually, I can not say this project ends here because I have some idea about that I have to update this project but I can not because of my exams. Unfortunately, my exams are approaching so I need to study.
+
+Some ideas that I have to add to this project:
+
+ * Improving **crop** function. I determined the size as (64, 64) but if the tumor is bigger than this size what will happen? The tumor can not fit in the frame. So I have to define a new function that contains some simple conditions according to tumor size. 
+
+Anyways maybe I can improve this function too.
