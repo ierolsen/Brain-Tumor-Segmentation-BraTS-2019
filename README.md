@@ -220,7 +220,7 @@ Another and last error was that:
 
 ValueError: A `Concatenate` layer requires inputs with matching shapes except for the concat axis. Got inputs shapes: [(None, 512, 14, 14), (None, 512, 15, 15)]
 
-**When I googled that, what I found was related by the size of images. I’ve learned that when you work with UNET, the sizes of your images must be divided by 32. Then I changed the sizes as (128,128)**
+**When I googled that, what I found was related by the size of images. I’ve learned that when you work with Neural Networks, the sizes of your images must be divided by 32. Then I changed the sizes as (128,128)**
 
 ![18](https://user-images.githubusercontent.com/30235603/107290069-3860ab80-6a66-11eb-8ec2-d00966a53f8b.png)
 
