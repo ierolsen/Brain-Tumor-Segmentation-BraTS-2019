@@ -170,6 +170,8 @@ Also, I fixed up these errors :) what I did is **resize** all images. Their size
 
 ![16](https://user-images.githubusercontent.com/30235603/107290067-37c81500-6a66-11eb-9ad4-9dc07e05c0d7.png)
 
+---
+
 # U-NET MODEL
 
 Before defining the model, I will define **Flair**, **T2**, and **seg** images. Also during training, I will use **Flair + T2**. The point is **Flair** and **T2** will be added each self. The reason why I will add two images called **Flair** and **T2** is that these two images complete their deficiency. For example, we can see clearly Edema in Flair but in T2, we can see the center of the Tumor clearly.
@@ -180,6 +182,7 @@ Before defining the model, I will define **Flair**, **T2**, and **seg** images. 
 
 ![17](https://user-images.githubusercontent.com/30235603/107290068-3860ab80-6a66-11eb-8a41-e98ba819bc15.png)
 
+---
 
 ### Explanations
 
@@ -194,6 +197,8 @@ if images are like that: (120, 120, 2) then I would use this code
 K.set_image_data_format('channels_last')
 ```
 
+---
+
 ### Dice Coefficient
 
 When we use accuracy in U-NET models, we can not realize that if the model was trained or not. Thus we use Dice Coefficient. When we put images on top of each other, Dice Coefficient gives differences of pixels. In U-NET Models, input and output are **images !!** so therefore we should analyze the difference of pixels.
@@ -203,6 +208,7 @@ When we use accuracy in U-NET models, we can not realize that if the model was t
 
 ![dice](https://user-images.githubusercontent.com/30235603/107290031-2ed74380-6a66-11eb-8fe8-22529312eeba.jpg)
 
+---
 
 ## NEWS:
 
@@ -223,7 +229,7 @@ Then using GPU of **Colab** I’ve trained my model in the 15th epochs.
 
 ![19](https://user-images.githubusercontent.com/30235603/107290070-38f94200-6a66-11eb-8235-ef904b2bc949.png)
 
-
+---
 
 # PREDICTION
 
@@ -267,6 +273,8 @@ According to these results, when I calculate center point, what I need to do is 
 
 ![24](https://user-images.githubusercontent.com/30235603/107290080-3a2a6f00-6a66-11eb-9e2f-9afea213f377.png)
 
+---
+
 # CROP
 
 Now I can crop it but first I will create a matrix that has (64,64) sizes. After this matrix, which has only zeros, I will add **T1ce** image. But an important point is when I add them, I have to add **64/2** and also I have to subtract **64/2** these operations provide that the image will be middle of the matrix.
@@ -282,6 +290,8 @@ After **T1ce** image, I will do it same steps for the segmentation image.
 In order to explain my steps, I only happened to all these steps just one image that is 280 images of the dataset. 
 
 It’s time to define a function that applies all these steps for all images! 
+
+---
 
 # FUNCTION FOR CROPPING
 
@@ -322,6 +332,7 @@ After this loop, all segmentation images will be in the center of the frame and 
 
 ![32](https://user-images.githubusercontent.com/30235603/107564896-40922580-6be3-11eb-9c31-ddbe8b6b021d.png)
 
+---
 
 # UNET MODEL FOR CROPPED IMAGES (SEGMENTATION)
 
@@ -332,6 +343,8 @@ Now, I will train a model again for cropped images
 
 
 The model doesn’t obtain well results because of that I worked with a subset (less dataset) but next days, if I solve the error, I will upload that again.
+
+---
 
 # CONCLUSION
 
