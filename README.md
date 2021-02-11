@@ -2,6 +2,8 @@
 
 In this project, I aim to work with 3D images and UNET models. Before I couldn’t have any chance to work with them thus I don’t have any idea what they are. But this project will be so educational for me. As well I aim to make practice in algorithms.
 
+---
+
 # Download Dataset:
 
 Dataset Link: https://ipp.cbica.upenn.edu/categories/brats2020
@@ -10,6 +12,7 @@ In order to download the dataset, first, you must sign up. After sign up, your a
 
 
 ---
+
 # READ and OPEN IMAGES
 
 First I started with uploading data using by **glob**, glob is one of the awesome libraries of Python. Using that I can get paths. But defining **glob**, I used **recursive=True** which means reach subfiles.
